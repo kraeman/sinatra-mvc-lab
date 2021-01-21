@@ -16,6 +16,17 @@ class PigLatinizer
                 array_from_word.unshift("a")
                 recombine = array_from_word.join
                 final << recombine
+            elsif array_from_word[1] != "a" &&  array_from_word[1] != "e" &&  array_from_word[1] != "i" &&  array_from_word[1] != "o" &&  array_from_word[1] != "u" && array_from_word[2] != "a" && array_from_word[2] != "e" &&  array_from_word[2] != "i" &&  array_from_word[2] != "o" &&  array_from_word[2] != "u"
+                first_letter = array_from_word.shift
+                second_letter = array_from_word.shift
+                third_letter = array_from_word.shift
+                array_from_word << first_letter
+                array_from_word << second_letter
+                array_from_word << third_letter
+                array_from_word << "a"
+                array_from_word << "y"
+                recombine = array_from_word.join
+                final << recombine    
             elsif array_from_word[1] != "a" &&  array_from_word[1] != "e" &&  array_from_word[1] != "i" &&  array_from_word[1] != "o" &&  array_from_word[1] != "u"
                 first_letter = array_from_word.shift
                 second_letter = array_from_word.shift
